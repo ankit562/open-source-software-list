@@ -1,0 +1,90 @@
+  h1 {
+    text-align: center; /* Center the heading */
+  }
+  
+  ul {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Space out items evenly */
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    flex-direction: row;
+  }
+  
+ li {
+    background: white; /* White background for items */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 30px; /* Inner padding */
+    margin: 10px; /* Space between items */
+    flex: 0 1 calc(29% - 20px); /* Each item takes about 30% of the row, minus margins */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  li:hover {
+    transform: scale(1.05); /* Scale up the item on hover */
+  }
+  
+  h2 {
+    font-size: 1.2em; /* Font size for the title */
+    margin: 0 0 10px; /* Margin below title */
+    color: #007bff; /* Blue color for titles */
+  }
+  
+  p {
+    font-size: 0.9em; /* Font size for the description */
+    margin: 0 0 10px; /* Margin below description */
+    color: #555; /* Dark gray color for text */
+  }
+  
+  a {
+    display: inline-block; /* Make the link a block */
+    padding: 10px 15px; /* Padding for the button */
+    background: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background 0.2s; /* Smooth transition for hover effect */
+    text-align: center;
+    width: -webkit-fill-available;
+  }
+  
+  a:hover {
+    background: #0056b3; /* Darker background on hover */
+  }
+  .pagination {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the pagination controls */
+    margin-top: 20px; /* Space above the pagination */
+  }
+  
+  .pagination button {
+    padding: 10px 15px; /* Padding for buttons */
+    margin: 0 5px; /* Space between buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc; /* Gray background for disabled buttons */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    background-color: #0056b3; /* Darker background on hover */
+  }
+  @media only screen and (max-width: 768px) {
+    li {
+      padding: 15px;
+        margin: 10px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: calc(90% - 20px);
+    }
+  }

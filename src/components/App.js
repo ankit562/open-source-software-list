@@ -39,7 +39,7 @@ const App = () => {
       <ul>
         {currentItems.map(software => (
           <li key={software.id}>
-            <h2>{software.name}</h2>
+            <h2>{software.name.charAt(0).toUpperCase() + software.name.slice(1)}</h2>
             <p>{software.description || "No description provided"}</p>
             <a href={software.html_url} target="_blank" rel="noopener noreferrer">Visit</a>
           </li>
